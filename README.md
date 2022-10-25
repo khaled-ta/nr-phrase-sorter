@@ -2,7 +2,7 @@
 
 ## Requirements
 1. Java 11
-2. Gradle 7.5.1
+2. Gradle 7.5.1 (you can use gradle wrapper to build)
 
 ## NOTES
 ```text
@@ -25,7 +25,7 @@
 ./gradlew test
 
 # run and build app locally using samples
-./scripts/buid-and-run-samples.sh
+./scripts/build-and-run-samples.sh
 
 # to run own files
 java -jar build/libs/nr-phrase-sorter-all.jar <your-files-here>
@@ -47,9 +47,7 @@ write a lot more tests :)
 add more file validations
 test for additional punctuation and non-alphanumeric characters 
 
-### interesting bits
+### features
 #### used multi-threads to process files concurrently
-#### used ConcurrentHashMap#compute to ensure thread safety
 #### return amount of time it takes to process each file
 #### fault-tolerant: if processing of 1 file fails, no affect on others
-#### checks for empty files and incorrect filenames
