@@ -1,11 +1,9 @@
 package com.kta.newrelic.phrases;
 
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.stream.Collectors;
 
@@ -14,7 +12,7 @@ public class PhraseEnumerationService {
 
     private final ConcurrentHashMap<String, Integer> phraseMap = new ConcurrentHashMap<>();
 
-    public void execute(String... filenames) throws InterruptedException {
+    public void execute(@NonNull String... filenames) throws InterruptedException {
         long start = System.currentTimeMillis();
 
         // todo: check number of filenames, if more than 1, then use ExecutorService
