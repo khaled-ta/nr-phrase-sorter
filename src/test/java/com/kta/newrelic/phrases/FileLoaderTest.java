@@ -34,9 +34,4 @@ class FileLoaderTest extends AbstractBaseTest {
     void loadFile_whenFileDoesNotExist_throwException() {
         assertThrows(FileLoadingException.class, () -> fileLoader.loadFile(NON_EXISTING_FILE));
     }
-
-    @Test
-    void loadFile_whenNullIsPassed_throwException() {
-        assertThrows(FileLoadingException.class, () -> fileLoader.loadFile(null));
-    }
 }
